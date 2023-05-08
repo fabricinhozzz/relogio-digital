@@ -1,0 +1,65 @@
+
+notas:
+ • esse é meu primeiro projeto programando, então fiz muitas coisas por referencia. basicamente, anotei o passo a passo de tudo, depois fui fazendo sem referencia das instruções (pra testar e relembrar meus conhecimentos) e, por ultimo, vi as anotações na hora de corrigir erros.
+ • video referencia por: Larissa Kich.
+
+
+html:
+    1♣ estrutura basica html
+    2♣ linkar a pasta do css ao html
+    3♣ div com uma classe (pra englobar o js e o css)
+    4♣ outra div dentro da div pra criar os spans das medidas de tempo
+
+css:
+    1♥ pegar alguma fonte bonitinha
+    2♥ selecionar todos os elementos do css com uma tag especifica (ajuda a zerar a formatção inicial que alguns elementos ja possuem)
+    3♥ dentro disso, em seguida temos a margem, o padding e a importação da fonte
+    4♥ agr é a customização do body:
+        altura 100vh (o vh significa viewport height, que é a ocupação da tela, basicamente)
+        background com gradiente linear
+        display flex pra alinhar os elementos no centro
+        align items no centro
+        justify content center, tbm pra centralizar
+    5♥ estilização da tag do relogio:
+    .relogio{}
+        display flex, tbm pros elementos ficarem centralizados e um do lado do outro
+        align items
+        justify content space around (pra dar o espaçamento entre os elementos)
+        altura 200px
+        largura 550px (depois vou testar a largura e altura em porcentagem, ao inves de por pixel)
+        background trasparent
+        border radius 3px (define as bordas do elemento)
+        box shadow opx 8px 10px rgba(0, 0, 0, .5) (é a caixinha que os horarios vão ficar, o rgba são as cores que darão uma ilusão de que a caixa ta meio que mais perto)
+    6♥ customização das divs:(são as caixinhas que vão ficar as medidas de tempo)
+        altura 170
+        width 150(é a largura, esqueci de dizer)
+        display flex
+        flex direction column (faz os numeros ficarem por cima, e os textos por baixo. por padrão o display felx deixa eles alinhados, ate onde eu sei)
+        align items
+        justify content
+        color (da fonte)
+        background rgba(5, 5, 5, 0.9)
+        box shadow 5px 5 px 15px rgba(0, 0, 0, 0.7)
+        border radius 7px
+        letter spacing 3px (espaçamento das letras)
+
+    7♥ customização dos spans: (onde ficam as fontes)
+        font weight bolder ("peso da fonte", serve pra engrosar o tamanho da fonte)
+        font size 60px
+
+        span.tempo:
+        font size 14px
+
+html:
+    5♣ dentor do body, criar um scrpit e importar o arquivo do js
+
+js:
+    1♦ const (todas as medidas, em const separadas) = id da span  (variavel que cria um valor apenas de leitura)
+    2♦ const pro relogio = setInterval(function time(){
+        let dateToday = new date()
+        let (variaveis de hora, minuto e segundo) = dateToday.get (hours(), minutes() e seconds())  (basicamente, as variaveis vão pegar o tempo do dia, por isso dateToday = new date, pra dizer que é o dia de uso)
+
+        if ((h, m ,s) < 10) = '0' + (h, m, s) (serve pra mostrar um 0 se o valor for menos doq 10, pra ficar com mais cara de relogio digital msm)
+
+        (horas, minutos e segundos).textcontent = (seus respectivos valores)
+    })
